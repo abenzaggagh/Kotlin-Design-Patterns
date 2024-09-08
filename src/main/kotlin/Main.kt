@@ -6,6 +6,7 @@ fun main() {
     println("Hello World!")
 
     val outfit = OutfitBuilder()
+        .setHat(Hat("Golf Hat", "Nike"))
         .setBelt(Belt(60, Color.BLACK))
         .setPants(Pants("Jeans", Color.BLUE))
         .addClothing(Shirt("T-Shirt", Color.RED))
@@ -20,4 +21,8 @@ fun main() {
         .build()
 
     println(outfitException.toString())
+
+    // Very simple to use
+    CartSingleton.addOutfit(outfit)
+
 }

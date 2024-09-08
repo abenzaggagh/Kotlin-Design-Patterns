@@ -15,20 +15,20 @@ class Outfit(
         var outfit = "Outfit is :${shirt.type} with ${pants.type} Pants and ${shoes.brand} Shoes."
         outfit += "\n" + "Additional Outfit :"
 
-        if (hat != null) {
-            outfit += "\n" + "Hat :" + hat!!.type
+        hat?.let {
+            outfit += "\n" + "Hat :" + it.type
         }
 
-        if (glasses != null) {
-            outfit += "\n" + "Glasses :" + glasses!!.type
+        glasses?.let {
+            outfit += "\n" + "Glasses :" + it.type
         }
 
-        if (belt != null) {
-            outfit += "\n" + "Belt with size :" + belt!!.size
+        belt?.let {
+            outfit += "\n" + "Belt with size :" + it.size
         }
 
-        if (watch != null) {
-            outfit += "\n" + "Watch with size :" + watch!!.size
+        watch?.let {
+            outfit += "\n" + "Watch with size :" + it.size
         }
 
         return outfit
