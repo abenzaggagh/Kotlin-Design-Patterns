@@ -15,14 +15,21 @@ fun main() {
 
     println(outfit.toString())
 
+    /*
     val outfitException = OutfitBuilder()
         .setBelt(Belt(60, Color.BLACK))
         .addClothing(Shirt("T-Shirt", Color.RED))
         .build()
 
     println(outfitException.toString())
+    */
 
     // Very simple to use
     CartSingleton.addOutfit(outfit)
+
+    println(CartSingleton)
+
+    println(OutfitFactory.getOutfit(OutfitStyle.NIKE))
+    println(OutfitFactory.getAppleOutfit())
 
 }

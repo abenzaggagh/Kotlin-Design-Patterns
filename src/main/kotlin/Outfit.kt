@@ -46,3 +46,7 @@ class Glasses(var type: String): Clothing {}
 class Hat(var type: String, var brand: String): Clothing {}
 class Belt(var size: Int, var color: Color): Clothing {}
 class Watch(var brand: String, var size: Int, var color: Color): Clothing {}
+
+enum class OutfitStyle {
+    APPLE, ADIDAS, NIKE, PUMA
+}
