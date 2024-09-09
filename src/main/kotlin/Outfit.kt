@@ -36,11 +36,11 @@ class Outfit(
 
 }
 
-interface Clothing { }
+interface Clothing
 
-class Shirt (var type: String, var color: Color) : Clothing { }
-class Pants (var type: String, var color: Color) : Clothing { }
-class Shoes (var type: String, var brand: String, var color: Color) : Clothing { }
+class Shirt (var type: String, var color: Color) : Clothing
+class Pants (var type: String, var color: Color) : Clothing
+class Shoes (var type: String, var brand: String, var color: Color) : Clothing
 
 class Glasses(var type: String): Clothing {}
 class Hat(var type: String, var brand: String): Clothing {}
