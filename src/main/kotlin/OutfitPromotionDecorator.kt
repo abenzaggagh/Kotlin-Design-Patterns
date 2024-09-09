@@ -8,4 +8,8 @@ class OutfitPromotionDecorator(
         promotion = newPromotion
     }
 
+    override fun toString(): String {
+        return "$outfit \nDiscount $promotion"
+    }
+
 }

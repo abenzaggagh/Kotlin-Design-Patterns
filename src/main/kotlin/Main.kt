@@ -1,5 +1,6 @@
 package com.demo
 
+import com.demo.chainofresponsibility.CurrentSeason
 import java.awt.Color
 
 fun main() {
@@ -31,5 +32,12 @@ fun main() {
 
     println(OutfitFactory.getOutfit(OutfitStyle.NIKE))
     println(OutfitFactory.getAppleOutfit())
+
+    val outfitWithPromotion = OutfitPromotionDecorator(outfit, "")
+    outfitWithPromotion.changePromotion("15 %")
+
+    println(outfitWithPromotion)
+
+    println(CurrentSeason().getOutfitForCurrentSeason())
 
 }
