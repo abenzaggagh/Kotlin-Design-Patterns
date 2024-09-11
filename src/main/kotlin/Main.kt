@@ -1,6 +1,7 @@
 package com.demo
 
 import com.demo.chainofresponsibility.CurrentSeason
+import com.demo.observer.OnShoppingCartChangerListener
 import java.awt.Color
 
 fun main() {
@@ -39,5 +40,21 @@ fun main() {
     println(outfitWithPromotion)
 
     println(CurrentSeason().getOutfitForCurrentSeason())
+
+    val listener = object: OnShoppingCartChangerListener {
+        override fun onOutfitAdded(outfit: Outfit, numberOfItems: Int) {
+            println("Added $numberOfItems outfit")
+        }
+
+        override fun onOutfitRemoved(outfit: Outfit, numberOfItems: Int) {
+            println("Removed $numberOfItems outfit")
+        }
+    }
+
+    CartSingleton.addListener(listener)
+
+    CartSingleton.addOutfit(outfit)
+
+    CartSingleton.removeListener(listener)
 
 }

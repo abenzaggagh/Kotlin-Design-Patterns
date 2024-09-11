@@ -34,6 +34,25 @@ class Outfit(
         return outfit
     }
 
+    fun size(): Int {
+        var result = 3;
+
+        hat?.let {
+            result += 1;
+        }
+        glasses?.let {
+            result += 1;
+        }
+        watch?.let {
+            result += 1;
+        }
+        belt?.let {
+            result += 1;
+        }
+
+        return result;
+    }
+
 }
 
 interface Clothing
